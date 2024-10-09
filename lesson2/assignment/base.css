@@ -1,0 +1,15 @@
+@charset "utf-8";
+body h1 {
+    color: #FF0000;
+    font-family: "ＭＳ Ｐゴシック";
+}
+.key {
+    color: #2000FF;
+    background-color: #D2D2D2;
+    font-size: x-large;
+}
+body p img {
+    border: 5px double #0FFF00;
+}
+body {
+}
