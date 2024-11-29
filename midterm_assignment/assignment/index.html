@@ -6,25 +6,28 @@
     <title>焼肉 牛工大</title>
     <meta name="description" content="焼肉 牛工大は一流の肉を格安で提供する本格炭火焼肉店です。">
     <link href="basic.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="sozai/favicon.ico">
 </head>
 
 <body>
     <header>
-        <h1>焼肉 牛工大</h1>
-        <p>中途半端なものは提供しません。一流の肉を格安で！</p>
+        <div class="header-container">
+            <img src="sozai/牛工大ロゴ.png" alt="焼肉 牛工大のロゴ" class="logo">
+            <nav class="nav-menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul>
+                    <li><a href="index.html" class="active">ホーム</a></li>
+                    <li><a href="menu.html">メニュー</a></li>
+                    <li><a href="contact.html">アクセス・当店について</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">ホーム</a></li>
-            <li><a href="menu.html">メニュー</a></li>
-            <li><a href="contact.html">アクセス・当店について</a></li>
-        </ul>
-    </nav>
 
     <main>
         <article>
-            <h2>ようこそ、焼肉 牛工大へ！</h2>
+            <h1>ようこそ、焼肉 牛工大へ！</h1>
             <p>
                 <img src="sozai/mise1.jpg" alt="焼肉 牛工大の店内写真">
             </p>
@@ -33,7 +36,7 @@
             <p>最新鋭の換気システムを導入しており、煙を気にせず快適にお食事をお楽しみいただけます。</p>
 
             <section>
-                <h3>本格炭火焼きの魅力</h3>
+                <h2>本格炭火焼きの魅力</h2>
                 <video controls>
                     <source src="sozai/onikuimages-1129131_h.mp4" type="video/mp4">
                     お使いのブラウザは動画タグに対応していません。
@@ -42,7 +45,7 @@
             </section>
 
             <section>
-                <h3>当店のこだわり</h3>
+                <h2>当店のこだわり</h2>
                 <ul>
                     <li>厳選された新鮮なお肉を使用</li>
                     <li>職人が丁寧にカットしたお肉を提供</li>
@@ -52,7 +55,7 @@
             </section>
 
             <section>
-                <h3>おすすめメニュー</h3>
+                <h2>おすすめメニュー</h2>
                 <div class="menu-highlight">
                     <div class="menu-item">
                         <img src="sozai/koudai_karubi.jpg" alt="工大カルビ">
@@ -71,7 +74,7 @@
             </section>
 
             <section>
-                <h3>お知らせ</h3>
+                <h2>お知らせ</h2>
                 <p>
                     <img src="sozai/yakiniku_party.png" alt="焼肉パーティーのイラスト">
                 </p>
@@ -82,11 +85,11 @@
 
     <footer>
         <address>
+            <img src="sozai/牛工大ロゴ.png" alt="焼肉 牛工大のロゴ" class="logo">
             <p>〒000-0000 焼肉市美食町1-2-3</p>
             <p>電話番号: 000-456-7890</p>
             <p>メール: <a href="mailto:info@yakiniku.umai.up">info@yakiniku.umai.up</a></p>
-            <p>© 2024 焼肉 牛工大</p>
-            <p>イラスト素材：<a href="https://www.irasutoya.com/" target="_blank">いらすとや</a></p>
+            <p>© 2024 焼肉 牛工大. All Rights Reserved.</p>
         </address>
     </footer>
 </body>

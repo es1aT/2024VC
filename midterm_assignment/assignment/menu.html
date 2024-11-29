@@ -6,29 +6,32 @@
     <title>メニュー - 焼肉 牛工大</title>
     <meta name="description" content="焼肉 牛工大のメニュー一覧。厳選された牛肉、豚肉、鶏肉をお楽しみください。">
     <link href="basic.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="sozai/favicon.ico">
 </head>
 
 <body>
     <header>
-        <h1>焼肉 牛工大</h1>
-        <p>中途半端なものは提供しません。一流の肉を格安で！</p>
+        <div class="header-container">
+            <img src="sozai/牛工大ロゴ.png" alt="焼肉 牛工大のロゴ" class="logo">
+            <nav class="nav-menu">
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="menu.html" class="active">メニュー</a></li>
+                    <li><a href="contact.html">アクセス・当店について</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="menu.html" class="active">メニュー</a></li>
-            <li><a href="contact.html">アクセス・当店について</a></li>
-        </ul>
-    </nav>
 
     <main>
         <article>
-            <h2>メニュー</h2>
+            <h1>メニュー</h1>
 
             <section>
-                <h3>☆ 牛肉</h3>
-                <div class="menu-items">
+                <h2>牛肉</h2>
+                <div class="menu-highlight">
                     <div class="menu-item">
                         <img src="sozai/koudai_karubi.jpg" alt="工大カルビ">
                         <p><strong>工大カルビ:</strong> 骨と骨の間の旨味の詰まった部位を丁寧にカット</p>
@@ -45,8 +48,8 @@
             </section>
 
             <section>
-                <h3>☆ 豚肉</h3>
-                <div class="menu-items">
+                <h2>豚肉</h2>
+                <div class="menu-highlight">
                     <div class="menu-item">
                         <img src="sozai/buta_tan.jpg" alt="トンたん塩">
                         <p><strong>トンたん塩:</strong> コリコリ食感を楽しむ。牛タンでなくても満足できます。</p>
@@ -59,8 +62,8 @@
             </section>
 
             <section>
-                <h3>☆ 鶏肉</h3>
-                <div class="menu-items">
+                <h2>鶏肉</h2>
+                <div class="menu-highlight">
                     <div class="menu-item">
                         <img src="sozai/tori_yagen.jpg" alt="ハラミ付きヤゲン">
                         <p><strong>ハラミ付きヤゲン:</strong> ジューシーなハラミがついた、コリコリの軟骨</p>
@@ -71,6 +74,7 @@
                     </div>
                 </div>
             </section>
+
         </article>
     </main>
 
@@ -80,7 +84,6 @@
             <p>電話番号: 000-456-7890</p>
             <p>メール: <a href="mailto:info@yakiniku.umai.up">info@yakiniku.umai.up</a></p>
             <p>© 2024 焼肉 牛工大</p>
-            <p>イラスト素材：<a href="https://www.irasutoya.com/" target="_blank">いらすとや</a></p>
         </address>
     </footer>
 </body>

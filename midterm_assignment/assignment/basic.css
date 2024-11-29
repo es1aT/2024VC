@@ -4,42 +4,51 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Yu Mincho", "Hiragino Mincho Pro", serif;
+    font-family: "Yu Gothic", "Hiragino Kaku Gothic Pro", sans-serif;
     background-color: #f8f3e7;
-    /* 和風の背景色 */
-    color: #2c2c2c;
-    line-height: 1.6;
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 20.5V18H0v-2h20v-2H0v-2h20v-2H0V8h20V6H0V4h20V2H0V0h22v20h2V0h2v20h2V0h2v20h2V0h2v20h2V0h2v20h2v2H20v-1.5zM0 20h2v20H0V20zm4 0h2v20H4V20zm4 0h2v20H8V20zm4 0h2v20h-2V20zm4 0h2v20h-2V20zm4 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2zm0 4h20v2H20v-2z' fill='%23ffffff' fill-opacity='0.52' fill-rule='evenodd'/%3E%3C/svg%3E");
+    color: #333333;
 }
 
-/* ヘッダーのスタイル */
+/* ヘッダー */
 header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    background-color: #9d5c35;
-    /* 焦げ茶色 */
-    color: #ffffff;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-    font-size: 2.5em;
-    margin: 0;
+.logo {
+    width: 100px;
+    height: auto;
 }
 
-header p {
-    font-size: 1.2em;
-    margin: 10px 0 0;
+/* ナビゲーション */
+.nav-menu {
+    position: relative;
 }
 
-/* ナビゲーションのスタイル */
-nav {
-    background-color: #e8c18d;
-    /* 和風の金茶色 */
-    padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.nav-menu input[type="checkbox"] {
+    display: none;
 }
 
-nav ul {
+.menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.nav-menu ul {
     display: flex;
     justify-content: center;
     list-style: none;
@@ -47,53 +56,67 @@ nav ul {
     padding: 0;
 }
 
-nav ul li {
+.nav-menu li {
     margin: 0 15px;
 }
 
-nav ul li a {
+.nav-menu a {
     text-decoration: none;
-    color: #2c2c2c;
+    color: #333;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 1.1em;
 }
 
-nav ul li a:hover {
+.nav-menu a:hover,
+.nav-menu .active {
     color: #9d5c35;
+}
+
+.nav-menu .active {
+    border-bottom: 3px solid #9d5c35;
+    padding-bottom: 3px;
 }
 
 /* メインコンテンツ */
 main {
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 20px;
+    padding: 100px 40px 30px;
+    background-color: transparent;
+    display: flex;
+    /* 中央揃え用 */
+    justify-content: center;
+    /* 中央寄せ */
 }
 
 /* 記事セクション */
 article {
-    margin-bottom: 20px;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    /* 記事の幅を固定 */
+    max-width: 100%;
+    /* 画面幅が小さい場合は縮小 */
+    margin: 0 auto;
+    /* 縦方向の中央寄せ補助 */
+    padding: 40px;
+    background-color: #fff;
     border-radius: 5px;
 }
 
-article h1,
-article h2 {
+article h1 {
     color: #9d5c35;
     border-bottom: 2px solid #9d5c35;
     padding-bottom: 5px;
 }
 
-article h3 {
-    font-size: 1.5em;
-    color: #9d5c35;
-    /* 焦げ茶色 */
-    border-left: 5px solid #c62828;
-    /* 深紅 */
+article h2 {
+    color: #353535;
+    /* 焼き肉屋に合う赤っぽい色 */
+    border-left: 5px solid #b33c2d;
+    /* 左端に棒をつける */
     padding-left: 10px;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    /* 棒と文字の間の余白 */
+    margin-bottom: 20px;
+    /* 見出しの下の余白 */
+    font-size: 1.5em;
+    /* 適度な文字サイズ */
 }
 
 article img {
@@ -103,99 +126,19 @@ article img {
 }
 
 /* メニューアイテムのスタイル */
-.menu-items {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.menu-item {
-    flex: 1 1 calc(33.333% - 20px);
-    /* 3列レイアウト（間隔を考慮） */
-    box-sizing: border-box;
-}
-
-.menu-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-.menu-item p {
-    margin-top: 10px;
-}
-
-/* メニューセクションのスタイル */
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    font-size: 1.8em;
-    color: #9d5c35;
-    border-bottom: 2px solid #9d5c35;
-    margin-bottom: 20px;
-}
-
-/* フッター */
-footer {
-    background-color: #9d5c35;
-    /* 焦げ茶色 */
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 20px;
-}
-
-footer a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* メディアクエリでレスポンシブ対応 */
-@media screen and (max-width: 768px) {
-    .menu-item {
-        flex: 1 1 calc(50% - 20px);
-        /* 画面幅が狭い場合は2列レイアウト */
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .menu-item {
-        flex: 1 1 100%;
-        /* 画面幅がさらに狭い場合は1列レイアウト */
-    }
-}
-
-video {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-
-/* セクション内の画像スタイル */
-section img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
-    margin: 20px 0;
-}
-
-/* おすすめメニューのハイライト */
 .menu-highlight {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .menu-highlight .menu-item {
-    flex: 1;
+    flex: 1 1 calc(33.333% - 60px);
+    background-color: #ffffff;
+    border: 1px solid #e0d6c8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
     text-align: center;
 }
 
@@ -209,25 +152,42 @@ section img {
     margin-top: 10px;
 }
 
-/* リストのスタイル */
-article ul {
-    list-style-type: disc;
-    padding-left: 20px;
+
+/* フッター */
+footer {
+    background-color: #3b2f2f;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
 }
 
-article ol {
-    list-style-type: decimal;
-    padding-left: 20px;
+footer a {
+    color: #ffcc99;
+    text-decoration: none;
 }
 
-/* セクションのスタイル調整 */
-article section {
-    margin-bottom: 40px;
+footer a:hover {
+    text-decoration: underline;
 }
 
-article section h2 {
-    font-size: 1.8em;
-    color: #9d5c35;
-    border-bottom: 2px solid #9d5c35;
-    margin-bottom: 20px;
+video {
+    width: 100%;
+    max-width: 800px;
+    /* 必要に応じて最大幅を調整 */
+    height: auto;
+    margin: 20px auto;
+}
+
+/* セクション内の画像スタイル */
+section img {
+    width: 100%;
+    max-width: 800px;
+    /* 必要に応じて最大幅を調整 */
+    height: auto;
+    border-radius: 5px;
+    margin: 20px auto;
+    /* 画像を中央揃えにします */
+    display: block;
+    /* 画像をブロック要素にします */
 }
