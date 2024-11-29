@@ -56,6 +56,12 @@ header {
     line-height: 1.2;
 }
 
+@media screen and (max-width: 1024px) {
+    .logo-text {
+        display: none;
+    }
+}
+
 .nav-menu {
     margin-left: auto;
     margin-right: 100px;
@@ -89,7 +95,7 @@ header {
 
 /* メインコンテンツ */
 main {
-    padding: 100px 40px 30px;
+    padding: 60px 40px 30px;
     background-color: transparent;
     display: flex;
     justify-content: center;
@@ -108,7 +114,6 @@ article h1 {
     color: #a0522d;
     border-bottom: 2px solid #a0522d;
     padding-bottom: 5px;
-    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -184,9 +189,9 @@ article img {
 footer {
     background-color: #3b2f2f;
     color: #ffffff;
+    font-size: 16px;
+    padding: 20px 40px;
     text-align: center;
-    padding: 20px;
-    font-size: 14px;
 }
 
 footer a {
@@ -194,8 +199,28 @@ footer a {
     text-decoration: none;
 }
 
-footer a:hover {
-    text-decoration: underline;
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.footer-info p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.footer-copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #cccccc;
 }
 
 /* 段落スタイル */
@@ -239,4 +264,28 @@ main li::before {
     font-size: 1.2rem;
     color: #a0522d;
     margin-right: 10px;
+}
+
+.menu-link {
+    color: #a0522d;
+    /* リンクの基本色（焼肉店らしい茶系） */
+    font-weight: bold;
+    /* 太字でリンクを強調 */
+    text-decoration: none;
+    /* 下線を削除 */
+    border-bottom: 2px solid #a0522d;
+    /* リンク部分に下線を追加 */
+    padding: 2px 0;
+    /* 下線と文字の間に余白を確保 */
+    transition: all 0.3s ease;
+    /* ホバー時のアニメーション効果 */
+}
+
+.menu-link:hover {
+    color: #ff4500;
+    /* ホバー時の色を赤系に */
+    border-bottom-color: #ff4500;
+    /* 下線の色も変化 */
+    text-decoration: none;
+    /* ホバー時も下線を削除しない */
 }
