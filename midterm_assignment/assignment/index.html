@@ -12,16 +12,26 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="sozai/牛工大ロゴ.png" alt="焼肉 牛工大のロゴ" class="logo">
-            <nav class="nav-menu">
-                <input type="checkbox" id="menu-toggle">
-                <label for="menu-toggle" class="menu-icon">&#9776;</label>
-                <ul>
-                    <li><a href="index.html" class="active">ホーム</a></li>
-                    <li><a href="menu.html">メニュー</a></li>
-                    <li><a href="contact.html">アクセス・当店について</a></li>
-                </ul>
-            </nav>
+            <!-- 上部情報 -->
+            <div class="header-top">
+                <p>📞 000-456-7890 | 営業時間: 17:00〜23:00 | 定休日: 水曜</p>
+            </div>
+
+            <!-- ロゴとキャッチフレーズ、モットー、ナビゲーション -->
+            <div class="header-main">
+                <img src="sozai/牛工大ロゴ.png" alt="焼肉 牛工大のロゴ" class="logo">
+                <div class="logo-text">
+                    <p>　本格炭火焼きの専門店</p>
+                    <p>「中途半端なものは提供しません。一流の肉を格安で！」</p>
+                </div>
+                <nav class="nav-menu">
+                    <ul>
+                        <li><a href="index.html" class="active">ホーム</a></li>
+                        <li><a href="menu.html">メニュー</a></li>
+                        <li><a href="contact.html">アクセス・当店について</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
@@ -37,9 +47,9 @@
 
             <section>
                 <h2>本格炭火焼きの魅力</h2>
-                <video controls>
-                    <source src="sozai/onikuimages-1129131_h.mp4" type="video/mp4">
-                    お使いのブラウザは動画タグに対応していません。
+                <video class="auto-video" autoplay muted loop>
+                    <source src="sozai/movie.mp4" type="video/mp4">
+                    ※ お使いのブラウザでは動画が再生できません。こちらは焼肉の調理シーンの動画です。
                 </video>
                 <p>当店自慢の炭火焼きの様子をご覧ください。</p>
             </section>
@@ -59,15 +69,15 @@
                 <div class="menu-highlight">
                     <div class="menu-item">
                         <img src="sozai/koudai_karubi.jpg" alt="工大カルビ">
-                        <p><strong>工大カルビ</strong></p>
+                        <p><strong>工大カルビ</strong><br> 骨と骨の間に詰まった旨味を丁寧にカットした特選部位。<br><span class="price">¥649</span></p>
                     </div>
                     <div class="menu-item">
                         <img src="sozai/harami.jpg" alt="ハラミ">
-                        <p><strong>ハラミ</strong></p>
+                        <p><strong>ハラミ</strong><br> 柔らかくジューシーな食感。お店イチ押しの一品。<br><span class="price">¥759</span></p>
                     </div>
                     <div class="menu-item">
                         <img src="sozai/tori_yagen.jpg" alt="ハラミ付きヤゲン">
-                        <p><strong>ハラミ付きヤゲン</strong></p>
+                        <p><strong>ハラミ付きヤゲン</strong><br> 軟骨のコリコリ食感とジューシーなハラミが楽しめる。<br><span class="price">¥539</span></p>
                     </div>
                 </div>
                 <p>詳しくは<a href="menu.html">メニュー</a>ページをご覧ください。</p>
@@ -84,8 +94,8 @@
     </main>
 
     <footer>
+        <img src="sozai/牛工大ロゴ.png" alt="焼肉 牛工大のロゴ" class="logo">
         <address>
-            <img src="sozai/牛工大ロゴ.png" alt="焼肉 牛工大のロゴ" class="logo">
             <p>〒000-0000 焼肉市美食町1-2-3</p>
             <p>電話番号: 000-456-7890</p>
             <p>メール: <a href="mailto:info@yakiniku.umai.up">info@yakiniku.umai.up</a></p>
