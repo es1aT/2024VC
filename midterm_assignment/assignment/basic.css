@@ -177,7 +177,7 @@ article img {
 /* 動画のスタイル */
 .auto-video {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     height: auto;
     margin: 20px auto;
     display: block;
@@ -230,11 +230,12 @@ main p {
     margin: 20px 0;
     color: inherit;
     font-family: inherit;
+    text-align: center;
 }
 
 main p img {
     width: 100%;
-    max-width: 800px;
+    max-width: 700px;
     height: auto;
     margin: 20px auto;
     display: block;
@@ -257,6 +258,7 @@ main li {
     background-color: #ffffff;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.4rem;
 }
 
 main li::before {
@@ -288,4 +290,13 @@ main li::before {
     /* 下線の色も変化 */
     text-decoration: none;
     /* ホバー時も下線を削除しない */
+}
+
+.access-section p {
+    text-align: left;
+}
+
+.small-image {
+    width: 400px;
+    height: auto;
 }
