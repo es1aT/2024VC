@@ -270,26 +270,17 @@ main li::before {
 
 .menu-link {
     color: #a0522d;
-    /* リンクの基本色（焼肉店らしい茶系） */
     font-weight: bold;
-    /* 太字でリンクを強調 */
     text-decoration: none;
-    /* 下線を削除 */
     border-bottom: 2px solid #a0522d;
-    /* リンク部分に下線を追加 */
     padding: 2px 0;
-    /* 下線と文字の間に余白を確保 */
     transition: all 0.3s ease;
-    /* ホバー時のアニメーション効果 */
 }
 
 .menu-link:hover {
     color: #ff4500;
-    /* ホバー時の色を赤系に */
     border-bottom-color: #ff4500;
-    /* 下線の色も変化 */
     text-decoration: none;
-    /* ホバー時も下線を削除しない */
 }
 
 .access-section p {
